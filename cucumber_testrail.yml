@@ -3,8 +3,8 @@ testrail_url: "https://madmax.testrail.net/index.php?"
 suites:
 
   - suite:
-      project_id: 2
-      project_symbol: 'CTR'
+      project_id: 3
+      project_symbol: 'SYM'
       suite_id:
       section_id:
-      testplan_id: 2
+      testplan_id: 3

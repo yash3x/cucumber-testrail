@@ -1,6 +1,6 @@
 Feature: Run CucumberTestRail with invalid config
 
-  @TestRail-CTR-4
+  @TestRail-SYM-1
   Scenario: Running CucumberTestRail with non-existent testrail_url in config throws error
     Given a TestRail API at http://localhost:7000
     When I run the script:
