@@ -1,10 +1,10 @@
-testrail_url: "https://originateqa.testrail.net/index.php?"
+testrail_url: "https://madmax.testrail.net/index.php?"
 
 suites:
 
   - suite:
-      project_id: 1
+      project_id: 2
       project_symbol: 'CTR'
       suite_id: 1
       section_id: 1
-      testplan_id: 1
+      testplan_id: 2
