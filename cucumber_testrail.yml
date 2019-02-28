@@ -4,7 +4,7 @@ suites:
 
   - suite:
       project_id: 2
-      project_symbol: 'CTR'
-      suite_id: 1
-      section_id: 1
+      project_symbol: 'SYM'
+      suite_id:
+      section_id:
       testplan_id: 2

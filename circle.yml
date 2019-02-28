@@ -1,22 +1,16 @@
-machine:
-  node:
-    version: 6.1.0
+]machine:
+   node:
+     version: 6.1.0
 
-test:
+   test:
 
-  pre:
-    - node_modules/coffee-script/bin/coffee --compile --output dist/ src/
-    - mkdir -p $CIRCLE_TEST_REPORTS/cucumber
+     pre:
+       # create a new folder in circle's artifacts directory for our cucumber results
+       - mkdir -p $CIRCLE_TEST_REPORTS/cucumber
 
-  override:
-    - cucumber-js --format json:$CIRCLE_TEST_REPORTS/cucumber/tests.cucumber --format pretty
+     override:
+       # run the cucumber tests and publish the json format to circle's artifacts
+       - cucumber-js --format json:$CIRCLE_TEST_REPORTS/cucumber/tests.cucumber --format pretty
 
-  post:
-    - ./bin/publish_results
-
-deployment:
-  publish:
-    branch: release
-    commands:
-      - npm set //registry.npmjs.org/:_authToken $AUTH_TOKEN
-      - npm publish
+     post:
+       - ./bin/publish_results
